@@ -5,8 +5,8 @@ README: the project logo and the demo animations.
 
 They live in their own repository so the large animation files don't
 inflate `flutter_scene`'s git history or clone size. The `flutter_scene`
-README references them via `raw.githubusercontent.com` URLs into this
-repo.
+README references them via
+`https://raw.githubusercontent.com/bdero/flutter_scene_media/main/<file>`.
 
 | File | Used for |
 | --- | --- |
@@ -18,4 +18,6 @@ repo.
 | `cloning.gif` | Node cloning demo |
 
 The animations are the original GIF exports. They may be re-encoded to
-a smaller format (animated WebP, etc.) later.
+a smaller format (animated WebP, etc.) later; if they are, the GitHub
+README and pub.dev (whose image proxy requires an image `Content-Type`)
+would both be able to render them.
