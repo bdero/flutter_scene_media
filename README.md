@@ -3,7 +3,7 @@
 Image assets used by the [`flutter_scene`](https://github.com/bdero/flutter_scene)
 README: the project logo and the demo animations.
 
-They live in their own repository so the large animation files don't
+They live in their own repository so the large source files don't
 inflate `flutter_scene`'s git history or clone size. The `flutter_scene`
 README references them via
 `https://raw.githubusercontent.com/bdero/flutter_scene_media/main/<file>`.
@@ -11,13 +11,17 @@ README references them via
 | File | Used for |
 | --- | --- |
 | `DashColorTransparent.svg` | Header logo |
-| `dashgameported2.gif` | Game demo |
-| `hexagons3.gif` | Procedural geometry demo |
-| `DamagedHelmet.gif` | glTF / PBR demo |
-| `car_example.gif` | Animated example app |
-| `cloning.gif` | Node cloning demo |
+| `dashgameported2.webp` | Game demo |
+| `hexagons3.webp` | Procedural geometry demo |
+| `DamagedHelmet.webp` | glTF / PBR demo |
+| `car_example.webp` | Animated example app |
+| `cloning.webp` | Node cloning demo |
 
-The animations are the original GIF exports. They may be re-encoded to
-a smaller format (animated WebP, etc.) later; if they are, the GitHub
-README and pub.dev (whose image proxy requires an image `Content-Type`)
-would both be able to render them.
+The `.webp` files are animated WebP, downscaled to 720px wide with the
+original frame rate preserved, lossy-encoded with `gif2webp`. The
+original full-resolution GIF exports (`dashgameported2.gif`, etc.) are
+kept in this repo as archival sources. The README points at the WebP
+versions because they serve with an `image/webp` content type
+(`raw.githubusercontent.com` serves multi-megabyte GIFs as
+`application/octet-stream`, which neither browsers with `nosniff` nor
+pub.dev's image proxy will render as an image).
